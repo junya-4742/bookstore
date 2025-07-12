@@ -44,12 +44,12 @@ a {
   text-decoration: none;
 }
 
-a:hover{
+a:hover {
   opacity: 0.7;
   transition: opacity 0.5s;
 }
 
-a.button{
+a.button {
   display: inline-block;
   border: #000 solid 1px;
   padding: 14px 36px;
@@ -76,15 +76,21 @@ p {
   object-fit: cover;
 }
 
-.mv img:first-child {
+.mv-img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-.mv img:last-child {
+.mv-logo {
   position: absolute;
   top: 30px;
   right: 30px;
+  /* width: 120px;
+  height: auto; */
+}
+
+.mv-logo img {
   width: 120px;
   height: auto;
 }
@@ -147,6 +153,13 @@ p {
   text-align: center;
 }
 
+@media (max-width:896px) {
+  .img-box {
+    flex-direction: column;
+  }
+
+}
+
 /* fashion */
 .fashion {
   background-image: url(./images/fashion.jpg);
@@ -196,44 +209,95 @@ p {
   margin: 40px 0 30px;
 }
 
-.book .txt-box a{
+.book .txt-box a {
   display: inline-block;
   margin-top: 60px;
 }
 
+@media screen and (max-width:896px) {
+  .book{
+    gap: 60px;
+  }
+
+  .book-item,
+  .book-item.reverse {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .book-item img {
+    width: 100%;
+    max-width: 337px;
+  }
+
+  .book-item.reverse .txt-box {
+    order: -1;
+  }
+
+  .book-item.reverse .book-img {
+    order: 1;
+  }
+
+}
+
 /* footer */
-.footer-container{
+.footer-container {
   background-color: #333333;
   color: #fff;
 }
 
-.footer-cont img{
+.footer-cont img {
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.footer-box{
+.footer-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 100px 19px;
 }
 
-.footer-cont{
+.footer-cont {
   font-size: 12px;
   width: 150px;
   justify-content: center;
 }
 
-.footer-cont h3{
+.footer-cont h3 {
   text-wrap: nowrap;
   font-size: 16px;
   margin-bottom: 10px;
 }
 
-.copy{
+.copy {
   padding: 30px;
   text-align: center;
   font-size: 12px;
+}
+
+@media (max-width:896px) {
+  .footer-box{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 19px 60px;
+  }
+
+   .footer-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-logo img {
+    width: 120px; /* 必要ならサイズ調整 */
+    height: auto;
+  }
+
+  .footer-cont{
+    margin-bottom: 30px;
+  }
+  
 }
