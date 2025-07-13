@@ -132,6 +132,7 @@ p {
   width: 100%;
   max-width: 510px;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .img-wrapper img {
@@ -176,6 +177,13 @@ p {
 
 .fashion p {
   margin: 20px auto 30px;
+}
+
+@media (max-width:896px) {
+  .fashion{
+    width: 100%;
+  }
+  
 }
 
 /* book */
